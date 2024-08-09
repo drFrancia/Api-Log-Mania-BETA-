@@ -20,7 +20,7 @@ with app.app_context():
     try:
         db.create_all()
     except Exception as e:
-        print(f"Error creating tables: {e}")
+        print(f"Error al crear tabla {e}")
 
 valid_tokens = [
     'Bearer abcd1234efgh5678ijkl',

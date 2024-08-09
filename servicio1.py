@@ -13,7 +13,7 @@ def generate_log():
         'timestamp': datetime.datetime.now(datetime.timezone.utc).strftime('%Y-%m-%dT%H:%M:%S'),
         'service_name': SERVICE_NAME,
         'level': random.choice(LOG_LEVELS),
-        'message': f'This is a log message from {SERVICE_NAME}'
+        'message': f'Este es un registro (log) de {SERVICE_NAME}'
     }
     return log
 
@@ -24,7 +24,7 @@ def send_log(log):
         response.raise_for_status()
         print(response.json())
     except requests.exceptions.RequestException as e:
-        print(f"Error sending log: {e}")
+        print(f"Error al enviar el registro (log): {e}")
 
 if __name__ == '__main__':
     while True:
